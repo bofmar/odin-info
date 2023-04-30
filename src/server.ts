@@ -5,6 +5,7 @@ import fs from 'fs';
 const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
   let path = './src/pages/';
+  let statusCode = 200;
 
   switch (req.url) {
     case '/':
@@ -17,11 +18,12 @@ const server = http.createServer((req, res) => {
       path += 'contact-me.html';
       break;
     default:
+      statusCode = 404;
       path += '404.html';
       break;
   }
 
-  res.statusCode = 200;
+  res.statusCode = statusCode;
 
   fs.readFile(path, (err, data) => {
     if (err) {
