@@ -1,2 +1,2 @@
 # odin-info
-Rudimentary server, made as an exercise for the Odin Project. Combines typescript with Node. [See it live, I guess.](https://odin-info.bofmar.repl.co)
+Rudimentary server, made as an exercise for the Odin Project. Combines typescript with Node. [![Run on Repl.it](https://replit.com/badge/github/bofmar/odin-info)](https://replit.com/new/github/bofmar/odin-info)
