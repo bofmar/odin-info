@@ -8,6 +8,16 @@ const PAGESPATH = path.join(__dirname, 'pages');
 
 const app = express();
 
+const logger = (req, _res, next) => {
+  console.log(`Request IP: ${req.ip}`);
+  console.log(`Request Method: ${req.method}`);
+  console.log(`Request date: ${new Date()}`);
+
+  next();
+}
+
+app.use(logger);
+
 app.get('/', (_req, res) => {
   res.sendFile(path.join(PAGESPATH, 'index.html'));
 });

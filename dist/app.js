@@ -5,6 +5,12 @@ const PORT = 3000;
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const PAGESPATH = path.join(__dirname, 'pages');
 const app = express();
+app.use((req, _res, next) => {
+    console.log(`Request IP: ${req.ip}`);
+    console.log(`Request Method: ${req.method}`);
+    console.log(`Request date: ${new Date()}`);
+    next();
+});
 app.get('/', (_req, res) => {
     res.sendFile(path.join(PAGESPATH, 'index.html'));
 });

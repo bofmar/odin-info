@@ -8,6 +8,7 @@
     "start": "nodemon ./src/app.js",
     "start2": "node --watch ./dist/server.js",
     "build": "tsc -p .",
+    "dev-express": "node --watch src/app",
     "dev": "nodemon ./src/server.ts",
     "dev2": "tsc-watch --onSuccess \"nodemon ./dist/server.js\"",
     "dev3": "tsc --watch & node --watch dist/server.js"
