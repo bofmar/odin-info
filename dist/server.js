@@ -1,5 +1,6 @@
 import http from 'http';
 import fs from 'fs';
+// script start
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html');
     let path = './src/pages/';
@@ -29,5 +30,5 @@ const server = http.createServer((req, res) => {
         res.end();
     });
 });
-server.listen(3000, () => console.log('Server started'));
+server.listen(3000, () => console.log('Server started at port 3000'));
 //# sourceMappingURL=server.js.map
